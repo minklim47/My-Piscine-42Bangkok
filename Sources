@@ -10,3 +10,6 @@ https://www.tecmint.com/ls-interview-questions/
 Git log
 https://linuxhint.com/view-the-commit-history-of-the-git-repository/
 https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
+
+gitignore
+https://stackoverflow.com/questions/15925079/why-does-git-ls-files-ignore-require-exclude-patterns
