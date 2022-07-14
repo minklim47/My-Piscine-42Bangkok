@@ -14,3 +14,6 @@ https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
 gitignore
   how to list files in .gitignore
 https://stackoverflow.com/questions/15925079/why-does-git-ls-files-ignore-require-exclude-patterns
+
+C00 - ex06
+https://stackoverflow.com/questions/57703754/write-a-2-digit-int-in-c-including-only-unistd-h
