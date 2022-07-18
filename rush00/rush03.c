@@ -6,7 +6,7 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 23:35:12 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/18 08:45:10 by climpras         ###   ########.fr       */
+/*   Updated: 2022/07/18 09:00:06 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	rush03(int x, int y)
 	while (i <= y)
 	{
 		j = 1;
-		while(j <= x)
+		while (j <= x)
 		{
 			if (j == 1 && (i == 1 || i == y))
 				ft_putchar('A');
@@ -45,6 +45,5 @@ void	rush03(int x, int y)
 
 int	main(void)
 {
-	rush03(4,4);
-
+	rush03(4, 4);
 }

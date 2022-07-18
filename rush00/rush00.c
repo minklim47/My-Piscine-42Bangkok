@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush00.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yourLogin <yourLogin@student.42.fr>        +#+  +:+       +#+        */
+/*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 10:05:14 by yourLogin         #+#    #+#             */
-/*   Updated: 2022/07/17 22:55:31 by yourLogin        ###   ########.fr       */
+/*   Created: 2022/07/18 09:01:26 by climpras          #+#    #+#             */
+/*   Updated: 2022/07/18 09:06:32 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	rush00(int x, int y)
 	int	j;
 
 	i = 1;
-	while (i <=  y)
+	while (i <= y)
 	{
 		j = 1;
 		while (j <= x)
@@ -34,19 +34,18 @@ void	rush00(int x, int y)
 				ft_putchar('o');
 			else if (i == 1 || i == y)
 				ft_putchar('-');
-			else if	(j == 1 || j == x)
+			else if (j == 1 || j == x)
 				ft_putchar('|');
 			else
 				ft_putchar(' ');
-			j++;		
+			j++;
 		}
 		ft_putchar('\n');
-		i++;	
+		i++;
 	}
 }
 
 int	main(void)
 {	
-	rush00(4,4);
-
+	rush00(4, 4);
 }
