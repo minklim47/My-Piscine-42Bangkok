@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush03.c                                           :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 23:35:12 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/18 09:46:34 by climpras         ###   ########.fr       */
+/*   Created: 2022/07/18 09:23:27 by climpras          #+#    #+#             */
+/*   Updated: 2022/07/18 09:23:32 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char a);
+void	ft_putchar(char a)
+{
+	write(1, &a, 1);
+}
 
-void	rush03(int x, int y)
+void	ft_putstr(char *str)
 {
 	int	i;
-	int	j;
-
-	i = 1;
-	while (i <= y)
+	i = 0;
+	while (*(str + i) != 0)
 	{
-		j = 1;
-		while (j <= x)
-		{
-			if (j == 1 && (i == 1 || i == y))
-				ft_putchar('A');
-			else if (j == x && (i == 1 || i == y))
-				ft_putchar('C');
-			else if (i == 1 || i == y || j == 1 || j == x)
-				ft_putchar('B');
-			else
-				ft_putchar(' ');
-			j++;
-		}
-		ft_putchar('\n');
+		ft_putchar(*(str + i));
 		i++;
 	}
+	putchar(' ');
+}
+
+int	main(void)
+{
+	ft_putstr("Hello World");
 }

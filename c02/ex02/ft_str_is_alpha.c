@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush03.c                                           :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 23:35:12 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/18 09:46:34 by climpras         ###   ########.fr       */
+/*   Created: 2022/07/18 17:03:51 by climpras          #+#    #+#             */
+/*   Updated: 2022/07/18 17:27:59 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char a);
-
-void	rush03(int x, int y)
+int	ft_str_is_alpha(char *str)
 {
 	int	i;
-	int	j;
-
-	i = 1;
-	while (i <= y)
+	
+	i = 0;
+	while (str[i] != '\0')
 	{
-		j = 1;
-		while (j <= x)
+		if ( str[i] < 'A' || str[i] > 'z')
 		{
-			if (j == 1 && (i == 1 || i == y))
-				ft_putchar('A');
-			else if (j == x && (i == 1 || i == y))
-				ft_putchar('C');
-			else if (i == 1 || i == y || j == 1 || j == x)
-				ft_putchar('B');
-			else
-				ft_putchar(' ');
-			j++;
+			return (0);
 		}
-		ft_putchar('\n');
-		i++;
+		else 
+			i++;
 	}
+	return (1);
+}
+
+int	main(void)
+{
+	char	str[] = "Addsd1";
+	printf("return : %d\n", ft_str_is_alpha(str));
 }

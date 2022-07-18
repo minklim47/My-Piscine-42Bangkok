@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush03.c                                           :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 23:35:12 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/18 09:46:34 by climpras         ###   ########.fr       */
+/*   Created: 2022/07/18 09:17:23 by climpras          #+#    #+#             */
+/*   Updated: 2022/07/18 12:33:05 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char a);
-
-void	rush03(int x, int y)
+/*#include <stdio.h>*/
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
-	int	j;
 
-	i = 1;
-	while (i <= y)
-	{
-		j = 1;
-		while (j <= x)
-		{
-			if (j == 1 && (i == 1 || i == y))
-				ft_putchar('A');
-			else if (j == x && (i == 1 || i == y))
-				ft_putchar('C');
-			else if (i == 1 || i == y || j == 1 || j == x)
-				ft_putchar('B');
-			else
-				ft_putchar(' ');
-			j++;
-		}
-		ft_putchar('\n');
+	i = 0;
+	while (src[i] != '\0')
+	{	
+		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }
+/*
+int	main(void)
+{
+	char	src[] = "Hell0";
+	char	dest[] = "Wor";
+	printf("%s\n", ft_strcpy(dest, src));
+}
+*/

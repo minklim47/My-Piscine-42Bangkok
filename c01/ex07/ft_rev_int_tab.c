@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush03.c                                           :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 23:35:12 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/18 09:46:34 by climpras         ###   ########.fr       */
+/*   Created: 2022/07/18 09:24:21 by climpras          #+#    #+#             */
+/*   Updated: 2022/07/18 09:24:24 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char a);
-
-void	rush03(int x, int y)
+void	ft_rev_int_tab(int *tab, int size)
 {
+	//int	*ptr;
 	int	i;
-	int	j;
-
-	i = 1;
-	while (i <= y)
+	int	temp;
+	
+	//ptr = &tab[size-1];
+	i = 0;
+	while (i < size / 2)
 	{
-		j = 1;
-		while (j <= x)
-		{
-			if (j == 1 && (i == 1 || i == y))
-				ft_putchar('A');
-			else if (j == x && (i == 1 || i == y))
-				ft_putchar('C');
-			else if (i == 1 || i == y || j == 1 || j == x)
-				ft_putchar('B');
-			else
-				ft_putchar(' ');
-			j++;
-		}
-		ft_putchar('\n');
+		temp = *(tab + i);
+		*(tab + i) = *(tab + ((size - 1) - i));	
+		*(tab + ((size -1) - i)) = temp;
 		i++;
 	}
+}
+
+int	main(void)
+{
+	int	size = 5;
+	int	tab[5] = {1,2,3,4,5};
+	ft_rev_int_tab(tab, size);
+	printf("%d\n", tab[0]);
+	printf("%d\n", tab[1]);
+	printf("%d\n", tab[2]);
+	printf("%d\n", tab[3]);
+	printf("%d\n", tab[4]);
 }

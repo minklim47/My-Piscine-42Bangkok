@@ -6,16 +6,13 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 09:01:26 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/18 09:06:32 by climpras         ###   ########.fr       */
+/*   Updated: 2022/07/18 09:43:12 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char a)
-{
-	write(1, &a, 1);
-}
+void	ft_putchar(char a);
 
 void	rush00(int x, int y)
 {
@@ -43,9 +40,4 @@ void	rush00(int x, int y)
 		ft_putchar('\n');
 		i++;
 	}
-}
-
-int	main(void)
-{	
-	rush00(4, 4);
 }
