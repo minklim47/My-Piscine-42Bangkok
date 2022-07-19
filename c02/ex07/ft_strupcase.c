@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
+/*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/18 17:03:51 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/19 21:25:38 by climpras         ###   ########.fr       */
+/*   Created: 2022/07/19 10:41:41 by climpras          #+#    #+#             */
+/*   Updated: 2022/07/19 21:29:19 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 /*
 #include <stdio.h>
 */
-int	ft_str_is_alpha(char *str)
+
+char	*ft_strupcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < 'A' || str[i] > 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			return (0);
-		}
-		else
-			i++;
+			str[i] = str[i] - 32;
+		}	
+		i++;
 	}
-	return (1);
+	return (str);
 }
 /*
 int	main(void)
 {
-	char	str[] = "Addsd1";
-	printf("return : %d\n", ft_str_is_alpha(str));
+	char str[] = "abcdABCD";
+	printf("%s\n", ft_strupcase(str));
 }
 */

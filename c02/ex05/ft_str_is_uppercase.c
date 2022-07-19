@@ -6,12 +6,13 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:54 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/18 21:39:32 by climpras         ###   ########.fr       */
+/*   Updated: 2022/07/19 21:28:26 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include <stdio.h>
-
+*/
 int	ft_str_is_uppercase(char *str)
 {
 	int	i;
@@ -26,9 +27,10 @@ int	ft_str_is_uppercase(char *str)
 	}
 	return (1);
 }
-
+/*
 int	main(void)
 {
-	char	str[] = "ASFa12";
-	printf("return : %d\n", ft_str_is_numeric(str));
+	char	str[] = "ABCa12";
+	printf("return : %d\n", ft_str_is_uppercase(str));
 }
+*/

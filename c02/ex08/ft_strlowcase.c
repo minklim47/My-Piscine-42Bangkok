@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
+/*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/18 17:03:51 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/19 21:25:38 by climpras         ###   ########.fr       */
+/*   Created: 2022/07/19 12:18:00 by climpras          #+#    #+#             */
+/*   Updated: 2022/07/19 21:34:38 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 #include <stdio.h>
 */
-int	ft_str_is_alpha(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < 'A' || str[i] > 'z')
+		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
-			return (0);
+			str[i] = str[i] + 32;
 		}
-		else
-			i++;
+		i++;
 	}
-	return (1);
+	return (str);
 }
 /*
 int	main(void)
 {
-	char	str[] = "Addsd1";
-	printf("return : %d\n", ft_str_is_alpha(str));
+	char	str[] = "ABCXYZabcxyz";
+	printf("%s\n", ft_strlowcase(str));
 }
 */

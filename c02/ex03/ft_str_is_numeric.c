@@ -6,12 +6,13 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:57:46 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/18 21:26:17 by climpras         ###   ########.fr       */
+/*   Updated: 2022/07/19 15:38:59 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include <stdio.h>
-
+*/
 int	ft_str_is_numeric(char *str)
 {
 	int	i;
@@ -26,10 +27,11 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (1);
 }
-
+/*
 int	main(void)
 {
-	char	str[] = "123d";
+	char	str[] = "123a";
 	printf("return : %d\n", ft_str_is_numeric(str));
 		
 }
+*/

@@ -6,11 +6,13 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 09:17:23 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/18 12:33:05 by climpras         ###   ########.fr       */
+/*   Updated: 2022/07/19 20:47:28 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+/*
+#include <stdio.h>
+*/
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
@@ -27,8 +29,8 @@ char	*ft_strcpy(char *dest, char *src)
 /*
 int	main(void)
 {
-	char	src[] = "Hell0";
-	char	dest[] = "Wor";
+	char	src[] = "Hello";
+	char	dest[] = {};
 	printf("%s\n", ft_strcpy(dest, src));
 }
 */
