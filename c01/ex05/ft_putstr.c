@@ -6,12 +6,11 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 09:23:27 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/18 09:23:32 by climpras         ###   ########.fr       */
+/*   Updated: 2022/07/19 14:49:49 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_putchar(char a)
 {
@@ -21,16 +20,18 @@ void	ft_putchar(char a)
 void	ft_putstr(char *str)
 {
 	int	i;
+
 	i = 0;
-	while (*(str + i) != 0)
+	while (*(str + i) != '\0')
 	{
 		ft_putchar(*(str + i));
 		i++;
 	}
-	putchar(' ');
 }
-
+/*
 int	main(void)
 {
-	ft_putstr("Hello World");
+	char	str[] = "Hello World";
+	ft_putstr(str);
 }
+*/

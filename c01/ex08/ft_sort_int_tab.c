@@ -6,13 +6,13 @@
 /*   By: climpras <climpras@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 09:25:59 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/18 09:26:22 by climpras         ###   ########.fr       */
+/*   Updated: 2022/07/19 14:47:27 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-                                                         
-#include <unistd.h>
-#include <stdio.h>
 
+/*
+#include <stdio.h>
+*/
 void	ft_sort_int_tab(int *tab, int size)
 {
 	int	temp;
@@ -22,10 +22,10 @@ void	ft_sort_int_tab(int *tab, int size)
 	i = 0;
 	while (i < size)
 	{
-		j = 0;
-		while (j < size)	
+		j = i + 1;
+		while (j < size)
 		{
-			if (*(tab + i) < *(tab + j))
+			if (*(tab + i) > *(tab + j))
 			{
 				temp = *(tab + i);
 				*(tab + i) = *(tab + j);
@@ -36,11 +36,11 @@ void	ft_sort_int_tab(int *tab, int size)
 		i++;
 	}
 }
-
+/*
 int	main(void)
 {
 	int	size = 5;
-	int	tab[5] = {5, 0, 9, 2, 4};
+	int	tab[5] = {1, 9, 4, 9, 3};
 	
 	ft_sort_int_tab(tab, size);
 	printf("%d ", tab[0]);
@@ -49,3 +49,4 @@ int	main(void)
 	printf("%d ", tab[3]);
 	printf("%d ", tab[4]);
 }
+*/
