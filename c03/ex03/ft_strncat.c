@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 20:25:37 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/21 18:35:22 by climpras         ###   ########.fr       */
+/*   Created: 2022/07/21 08:55:41 by climpras          #+#    #+#             */
+/*   Updated: 2022/07/21 15:36:27 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,30 +25,32 @@ int	ft_strlen(char *str)
 	return (len);
 }
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	dest_len;
+	unsigned int	dest_len;
+	unsigned int	i;
 
 	dest_len = ft_strlen(dest);
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i] != '\0' && i < nb)
 	{
 		dest[dest_len] = src[i];
 		i++;
 		dest_len++;
 	}
-	dest[dest_len + i] = '\0';
+	dest[dest_len + i + 1] = '\0';
 	return (dest);
 }
 /*
 int	main(void)
 {
 	char	dest1[20] = "Hello";
-	char	src1[] = "World";
+	char	src1[] = "girlfriend";
 	char	dest2[20] = "Hello";
-	char	src2[] = "World";
-	printf("original : %s\n", strcat(dest1, src1));
-	printf("result   : %s\n", ft_strcat(dest2, src2));
+	char	src2[] = "girlfriend";
+	int	nb = 4;
+
+	printf("original : %s\n", strncat(dest1, src1, nb));
+	printf("result : %s\n", ft_strncat(dest2, src2, nb));
 }
 */
