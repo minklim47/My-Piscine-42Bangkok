@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 14:01:05 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/23 14:59:19 by climpras         ###   ########.fr       */
+/*   Updated: 2022/07/27 15:34:01 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,11 @@ void	ft_putnbr(int nb)
 		ft_putchar('-');
 		ft_putchar('2');
 		ft_putnbr(147483648);
-
 	}
 	else if (nb < 0)
 	{
 		ft_putchar('-');
-		nb = -1 * nb;
+		nb = nb * -1;
 		ft_putnbr(nb);
 	}
 	else if (nb >= 0 && nb <= 9)
@@ -43,9 +42,8 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb % 10);
 	}
 }
-/*
+
 int	main(void)
 {
-	ft_putnbr(-2147483648);
+	ft_putnbr(756);
 }
-*/

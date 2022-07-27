@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/24 10:11:36 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/27 12:47:07 by climpras         ###   ########.fr       */
+/*   Created: 2022/07/27 14:37:32 by climpras          #+#    #+#             */
+/*   Updated: 2022/07/27 16:14:23 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_iterative_factorial(int nb)
+int	ft_sqrt(int nb)
 {
-	int	ans;
+	int	start;
+	int	mid;
+	int	end;
 
-	ans = 1;
-	if (nb == 0)
+	start = 0;
+	end = nb;
+	while (start <= end)
 	{
-		return (1);
-	}
-	else if (nb > 0)
-	{
-		while (nb >= 1)
-		{
-			ans = ans * nb;
-			nb--;
-		}
-		return (ans);
+		mid = (start + end) / 2;
+		if (mid * mid == nb)
+			return (mid);
+		else if (mid * mid < nb)
+			start = mid + 1;
+		else if (mid * mid > nb)
+			end = mid - 1;
 	}
 	return (0);
 }
 /*
 int	main(void)
 {
-	int	nb = 4;
-	printf("%d\n", ft_iterative_factorial(nb));
+	printf("%d\n", ft_sqrt(100));
 }
 */

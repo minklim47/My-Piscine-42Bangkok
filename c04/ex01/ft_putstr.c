@@ -6,13 +6,14 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 13:53:45 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/23 14:00:20 by climpras         ###   ########.fr       */
+/*   Updated: 2022/07/25 15:09:11 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include <stdio.h>
 #include <unistd.h>
-
+*/
 void	ft_putchar(char a)
 {
 	write(1, &a, 1);

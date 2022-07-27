@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 10:40:07 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/24 14:30:13 by climpras         ###   ########.fr       */
+/*   Updated: 2022/07/27 12:48:05 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,10 @@ int	ft_recursive_factorial(int nb)
 	else
 		return (nb * ft_recursive_factorial(nb - 1));
 }
-
+/*
 int	main(void)
 {
 	int	nb = 4;
 	printf("%d\n", ft_recursive_factorial(nb));
 }
-
-
+*/

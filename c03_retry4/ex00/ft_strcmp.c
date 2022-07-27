@@ -1,41 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/24 10:11:36 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/27 12:47:07 by climpras         ###   ########.fr       */
+/*   Created: 2022/07/20 08:37:12 by climpras          #+#    #+#             */
+/*   Updated: 2022/07/25 22:38:15 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include <stdio.h>
-
-int	ft_iterative_factorial(int nb)
+#include <string.h>
+*/
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	ans;
+	unsigned int	i;
+	unsigned char	a;
+	unsigned char	b;
 
-	ans = 1;
-	if (nb == 0)
+	i = 0;
+	while (s1[i] != '\0' || s2[i] != '\0')
 	{
-		return (1);
+		a = s1[i];
+		b = s2[i];
+		if (a == b)
+			i++;
+		else
+			return (a - b);
 	}
-	else if (nb > 0)
-	{
-		while (nb >= 1)
-		{
-			ans = ans * nb;
-			nb--;
-		}
-		return (ans);
-	}
-	return (0);
+	return (a - b);
 }
 /*
 int	main(void)
 {
-	int	nb = 4;
-	printf("%d\n", ft_iterative_factorial(nb));
+	char	s1[] = "\200";
+	char	s2[] = "\0";
+	
+	printf("original : %d\n", strcmp(s1, s2));
+	printf("result : %d\n", ft_strcmp(s1, s2));
 }
 */
