@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 04:09:43 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/03 04:28:44 by climpras         ###   ########.fr       */
+/*   Updated: 2022/08/03 06:01:11 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,10 @@ int	main(int argc, char *argv[])
 			{
 				if (argv[1][i] == argv[2][j] 
 					&& check(argv[1][i], argv[1], i) == 1)
+				{
 					write(1, &argv[1][i], 1);
+					break;
+				}
 				j++;
 			}
 			i++;
