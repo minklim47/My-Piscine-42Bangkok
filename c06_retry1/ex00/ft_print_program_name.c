@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/24 14:30:41 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/31 13:00:09 by climpras         ###   ########.fr       */
+/*   Created: 2022/07/26 11:51:33 by climpras          #+#    #+#             */
+/*   Updated: 2022/07/31 17:14:48 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int	ft_iterative_power(int nb, int power)
+void	ft_putstr(char *str)
 {
-	int	ans;
+	int	i;
 
-	ans = nb;
-	if (power < 0)
-		return (0);
-	else if (nb == 0 && power == 0)
-		return (1);
-	else if (power == 1)
-		return (nb);
-	while (power > 1)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ans = ans * nb;
-		power--;
+		write(1, &str[i], 1);
+		i++;
 	}
-	return (ans);
 }
 
-int	main(void)
+int	main(int argc, char *argv[])
 {
-	int	nb = 12;
-	int	power = 0;
-	printf("%d\n", ft_iterative_power(nb, power));
+	(void)argc;
+	ft_putstr(argv[0]);
+	write(1, "\n", 1);
 }

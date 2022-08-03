@@ -1,39 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/24 14:30:41 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/31 13:00:09 by climpras         ###   ########.fr       */
+/*   Created: 2022/07/30 11:55:54 by climpras          #+#    #+#             */
+/*   Updated: 2022/08/02 06:36:58 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <stdio.h>
 
-int	ft_iterative_power(int nb, int power)
+int	*ft_range(int min, int max)
 {
-	int	ans;
+	int	range;
+	int	*arr;
+	int	i;
 
-	ans = nb;
-	if (power < 0)
-		return (0);
-	else if (nb == 0 && power == 0)
-		return (1);
-	else if (power == 1)
-		return (nb);
-	while (power > 1)
+	if (min >= max)
+		return (NULL);
+	range = max - min;
+	arr = (int *)malloc(sizeof(int) * range);
+	i = 0;
+	while (i < range)
 	{
-		ans = ans * nb;
-		power--;
+		arr[i] = min + i;
+		i++;
 	}
-	return (ans);
+	return (arr);
 }
-
+/*
 int	main(void)
 {
-	int	nb = 12;
-	int	power = 0;
-	printf("%d\n", ft_iterative_power(nb, power));
+	int	min;
+	int	max;
+	int	*tab;
+	int	i = 0;
+	int	size;
+
+	min = 7;
+	max = 10;
+	size = max - min;
+	tab = ft_range(min, max);
+	while(i < size)
+	{
+		printf("%d, ", tab[i]);
+		i++;
+	}
 }
+*/

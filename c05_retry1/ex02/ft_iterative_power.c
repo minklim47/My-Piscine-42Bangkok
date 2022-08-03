@@ -6,7 +6,7 @@
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 14:30:41 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/31 13:00:09 by climpras         ###   ########.fr       */
+/*   Updated: 2022/07/27 12:53:49 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,11 @@ int	ft_iterative_power(int nb, int power)
 	}
 	return (ans);
 }
-
+/*
 int	main(void)
 {
 	int	nb = 12;
-	int	power = 0;
+	int	power = 1;
 	printf("%d\n", ft_iterative_power(nb, power));
 }
+*/

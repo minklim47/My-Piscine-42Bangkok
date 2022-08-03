@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/24 14:30:41 by climpras          #+#    #+#             */
-/*   Updated: 2022/07/31 13:00:09 by climpras         ###   ########.fr       */
+/*   Created: 2022/07/26 13:07:41 by climpras          #+#    #+#             */
+/*   Updated: 2022/07/31 11:29:46 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 
-int	ft_iterative_power(int nb, int power)
+void	ft_putstr(char *str)
 {
-	int	ans;
+	int	i;
 
-	ans = nb;
-	if (power < 0)
-		return (0);
-	else if (nb == 0 && power == 0)
-		return (1);
-	else if (power == 1)
-		return (nb);
-	while (power > 1)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ans = ans * nb;
-		power--;
+		write(1, &str[i], 1);
+		i++;
 	}
-	return (ans);
 }
 
-int	main(void)
+int	main(int argc, char *argv[])
 {
-	int	nb = 12;
-	int	power = 0;
-	printf("%d\n", ft_iterative_power(nb, power));
+	int	n;
+	int	i;	
+
+	n = argc;
+	i = 1;
+	while (i < n)
+	{
+		ft_putstr(argv[n - i]);
+		ft_putstr("\n");
+		i++;
+	}
 }
