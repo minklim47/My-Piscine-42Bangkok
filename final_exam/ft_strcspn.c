@@ -1,37 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   alpha_mirror.c                                     :+:      :+:    :+:   */
+/*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: climpras <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/03 01:43:01 by climpras          #+#    #+#             */
-/*   Updated: 2022/08/04 21:07:05 by climpras         ###   ########.fr       */
+/*   Created: 2022/08/04 21:50:01 by climpras          #+#    #+#             */
+/*   Updated: 2022/08/04 22:38:10 by climpras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-int	main(int argc, char *argv[])
+size_t ft_strcspn(const char *s, const char *reject)
 {
-	int	i;
+	size_t	i;
+	size_t	j;
 
-	if (argc != 2)
-	{
-		write(1, "\n", 1);
-		return (0);
-	}
 	i = 0;
-	while (argv[1][i])
+	while (reject[i])
 	{
-		if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
-			argv[1][i] = 'M' - (argv[1][i] - 'N');
-
-		else if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
-			argv[1][i] = 'm' - (argv[1][i] - 'n');
-		write(1, &argv[1][i], 1);
+		j = 0;
+		while (reject[j])
+		{
+			if (s[j] == reject[i])
+			{
+				return (i);
+			}
+			j++;
+		}
 		i++;
 	}
-	write(1, "\n", 1);
-	return (0);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+int	main(void)
+{
+	printf("%zu\n", ft_strcspn("Hello", "ie"));
 }
